@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="title">
+      <h1 id="title">Survey Form For <span>Responsive Web Design</span></h1>
+    </div>
+    <div class="form">
+      <form id="survey-form">
+        <div class="image"></div>
+        <div class="inputarea">
+          <label id="name-label"
+            ><i class="fa-solid fa-user"></i> Full Name
+
+            <input
+              id="name"
+              placeholder="Enter Your Full Name"
+              type="text"
+              required
+          /></label>
+          <label id="email-label"
+            ><i class="fa-solid fa-envelope"></i> Mail
+            <input
+              id="email"
+              placeholder="Enter Your Email"
+              type="email"
+              required
+          /></label>
+          <label id="number-label">
+            <i class="fa-solid fa-cake-candles"></i>
+            Age
+            <input
+              id="number"
+              placeholder="Enter Your Age"
+              type="number"
+              max="9"
+              min="5"
+          /></label>
+        </div>
+        <select id="dropdown">
+          <option>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <div class="radio-buttons">
+          <p>Where did you here us?</p>
+          <input type="radio" value="1" name="radio-name" class="" />
+          <label for="1">Instagram</label><br />
+          <input type="radio" value="0" name="radio-name" class="" />
+          <label for="0">Linkedn</label><br />
+        </div>
+        <div class="checkboxes">
+          <label for="chech1">
+            <input type="checkbox" value="check1" />
+            Terms Of Service
+          </label>
+          <label for="check2">
+            <input type="checkbox" value="check2" />
+            Subscribe For News
+          </label>
+        </div>
+        <textarea placeholder="Suggestions"></textarea>
+        <div class="submitdiv">
+          <input id="submit" type="submit" value="Sign Up" />
+        </div>
+      </form>
+    </div>
+    <p id="description">freeCodeCamp</p>
+  </body>
+</html>
