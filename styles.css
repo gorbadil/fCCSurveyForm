@@ -81,28 +81,55 @@ p {
 }
 
 /* Form Inputs */
-.inputarea label {
-  margin: auto;
-  width: 80%;
+.inputarea {
+  position: relative;
+}
+.form-inputs {
+  position: relative;
+  width: 100%;
+}
+.form-inputs label {
   color: #c2cfe0;
   font-weight: bolder;
   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  pointer-events: none;
+  padding: 1rem;
+  transition: 200ms;
 }
 .inputarea input {
+  position: relative;
   background-color: transparent;
-  width: calc(100%);
+  width: calc(100% - 2rem);
   display: block;
-  margin: 5px 0 15px;
+  margin: 25px 0;
   line-height: 1.2rem;
-  border: 0;
-  padding: 0.3rem;
-  border-bottom: 1px solid #c0ffff;
+  border-radius: 6px;
+  padding: 1rem;
+  border: 1px solid #c0ffff;
+  color: #c0ffff;
+  font-weight: bolder;
   text-align: center;
 }
-.inputarea input:focus {
+input:focus {
   outline: none;
-  background-color: #c0ffff33;
 }
+
+#name:valid ~ label,
+#email:valid ~ label,
+#name:focus ~ label,
+#email:focus ~ label,
+#number:focus ~ label,
+#number:invalid ~ label {
+  transform: translateY(calc(-0.5rem));
+  background-color: #34475e;
+  border-left: 1px solid #c2cfe0;
+  border-right: 1px solid #c2cfe0;
+  padding: 0 1rem;
+}
+
 /* Form Select */
 #dropdown {
   text-align: center;
@@ -110,6 +137,7 @@ p {
   background-color: #34475e;
   color: #5bccc0;
   width: calc(100% + 0.6rem);
+  font-size: 1.3rem;
   height: 1.8rem;
   border: none;
   border-bottom: 1px solid #c0ffff;
@@ -156,10 +184,10 @@ textarea {
   height: 3rem;
   border: 1px solid #5bccc0;
   margin: 0 0 10px 0;
+  color: #c2cfe0;
 }
 textarea:focus {
   outline: none;
-  color: #c2cfe0;
 }
 
 /* Submit Button */

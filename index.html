@@ -17,33 +17,31 @@
       <form id="survey-form">
         <div class="image"></div>
         <div class="inputarea">
-          <label id="name-label"
-            ><i class="fa-solid fa-user"></i> Full Name
-
-            <input
-              id="name"
-              placeholder="Enter Your Full Name"
-              type="text"
-              required
-          /></label>
-          <label id="email-label"
-            ><i class="fa-solid fa-envelope"></i> Mail
-            <input
-              id="email"
-              placeholder="Enter Your Email"
-              type="email"
-              required
-          /></label>
-          <label id="number-label">
-            <i class="fa-solid fa-cake-candles"></i>
-            Age
+          <div class="form-inputs">
+            <input id="name" type="text" required />
+            <label id="name-label"
+              ><i class="fa-solid fa-user"></i> Full Name
+            </label>
+          </div>
+          <div class="form-inputs">
+            <input id="email" type="email" required />
+            <label id="email-label"
+              ><i class="fa-solid fa-envelope"></i> Mail</label
+            >
+          </div>
+          <div class="form-inputs">
             <input
               id="number"
-              placeholder="Enter Your Age"
               type="number"
-              max="9"
-              min="5"
-          /></label>
+              max="99"
+              min="18"
+              step="1"
+              value=""
+            /><label id="number-label">
+              <i class="fa-solid fa-cake-candles"></i>
+              Age</label
+            >
+          </div>
         </div>
         <select id="dropdown">
           <option>Select Gender</option>
